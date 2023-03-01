@@ -1,0 +1,1 @@
+CompInOut  M:\Contest\2015\PNW2015ProbD\PNW2015ProbD\bin\Debug\PNW2015ProbD.exe M:\Contest\2015\recap\Triangle

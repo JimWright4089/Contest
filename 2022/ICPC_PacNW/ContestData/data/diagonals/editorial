@@ -1,0 +1,7 @@
+This problem is solvable with recursive backtracking. With the degree constraints, there are
+some diagonals that are forced (for example if the degree is 0 or 4), and this can also 
+result in other diagonals that are clearly forced before we do any recursive backtracking.
+
+As we recursively backtrack, we should short-circuit immediately if we violate some degree
+constraint (either in the present or because we make it impossible), and we should also
+check cycles incrementally as we go.

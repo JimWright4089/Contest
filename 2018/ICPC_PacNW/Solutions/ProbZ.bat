@@ -1,0 +1,1 @@
+CompInOut  .\ProbZ\Release\ProbZ.exe C:\Users\JWright6\JimWright\JimsCode\Contests\2018\ICPC_PacNW\recap\PizzaDeal

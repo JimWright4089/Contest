@@ -1,0 +1,1 @@
+Let a "block" be some permutation of the letters JLSZIOT. Then the input string consists of a partial block, some full blocks, and then ends with a partial block. Try every length of the first partial block [0, 7) and see if all blocks are valid. Overall runtime is O(7 * N).

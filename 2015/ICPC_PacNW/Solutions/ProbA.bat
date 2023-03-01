@@ -1,0 +1,1 @@
+CompInOut  M:\Contest\2015\PNW2015ProbA\PNW2015ProbA\bin\Debug\PNW2015ProbA.exe M:\Contest\2015\recap\Airports

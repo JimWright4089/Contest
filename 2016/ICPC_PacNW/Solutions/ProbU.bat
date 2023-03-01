@@ -1,0 +1,1 @@
+CompInOut  M:\Contest\2016\PNW2016ProbU\PNW2016ProbU\bin\Debug\PNW2016ProbU.exe M:\Contest\2016\recap\MismatchedSocks

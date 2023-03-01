@@ -1,0 +1,3 @@
+﻿  ProbD.cpp
+C:\Users\JWright6\JimWright\JimsCode\Contests\2018\ICPC_PacNW\Div1\ProbD\ProbD\ProbD.cpp(32,21): warning C4244: 'initializing': conversion from 'double' to 'uint32_t', possible loss of data
+  ProbD.vcxproj -> C:\Users\JWright6\JimWright\JimsCode\Contests\2018\ICPC_PacNW\Div1\ProbD\Debug\ProbD.exe

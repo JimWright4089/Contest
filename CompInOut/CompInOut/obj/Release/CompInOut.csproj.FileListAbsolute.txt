@@ -1,0 +1,6 @@
+M:\Contest\2016\CompInOut\CompInOut\bin\Release\CompInOut.exe.config
+M:\Contest\2016\CompInOut\CompInOut\bin\Release\CompInOut.exe
+M:\Contest\2016\CompInOut\CompInOut\bin\Release\CompInOut.pdb
+M:\Contest\2016\CompInOut\CompInOut\obj\Release\CompInOut.exe
+M:\Contest\2016\CompInOut\CompInOut\obj\Release\CompInOut.pdb
+M:\Contest\2016\CompInOut\CompInOut\obj\Release\CompInOut.csprojResolveAssemblyReference.cache

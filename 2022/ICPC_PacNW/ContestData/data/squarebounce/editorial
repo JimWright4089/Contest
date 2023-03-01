@@ -1,0 +1,42 @@
+This problem looked like it required a rational class and a lot of
+special case-work to manage moving in four different directions.
+But a bit of insight can simplify things.
+
+First, let's get rid of the fractions.  Instead of bouncing around
+in a square at a slope of a/b, let's instead bounce around in a
+rectangle that's 2b wide and 2a high.  Now, we are always moving at
+a slope that's either +1 or -1.  Once we find the final point, we
+can scale it back down to the original square.
+
+Next, let's get rid of the different directions.  Instead of using
+one rectangle that's 2b wide and 2a high, let's use four rectangles
+in a 2x2 stack for an overall large rectangle that's 4b wide and
+4a high.  Now our slope always stays at 1, and if we end up in
+the two rectangles to the right, we have to "negate" the x value,
+and if we end up in the two rectangles at top, we need to "negate"
+the y value.
+
+Once we do this, it's just a matter of doing n+1 steps of
+incrementing both x and y by the minimum of the distance to the
+next horizontal or vertical line.
+
+Final code could be similar to this:
+
+   int x = 0 ; // start in the upper right
+   int y = b ;
+   for (int i=0; i<n+1; i++) {
+      int dx = 2 * a - x % (2 * a) ; // distance to vertical
+      int dy = 2 * b - y % (2 * b) ; // distance to horizontal
+      int d = min(dx, dy) ;
+      x = (x + d) % (4 * a) ; // wrap
+      y = (y + d) % (4 * b) ; // wrap
+   }
+   x -= a ;
+   y -= b ;
+   if (x > a)
+      x = 2 * a - x ;
+   if (y > b)
+      y = 2 * b - y ;
+   reduce(x, a) ;
+   reduce(y, b) ;
+   cout << x << " " << a << " " << y << " " << b << endl ;

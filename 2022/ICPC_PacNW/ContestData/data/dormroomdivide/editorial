@@ -1,0 +1,1 @@
+Because the dorm is convex, using the shoelace theorem breaks the polygon into triangles of positive area. First, compute the total area. Then, walk the triangles one by one until including the next triangle would make the selected region have over half the total area of the dorm. The point on the edge that makes the last bit of area can then be exactly computed as a ratio.

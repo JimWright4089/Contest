@@ -1,0 +1,193 @@
+Run:
+   
+   
+   
+   
+   
+   
+ X 
+ X 
+ X 
+ X 
+
+Run:
+   
+   
+   
+   
+   
+   
+   
+  X
+ XX
+ X 
+
+Run:
+   
+   
+   
+   
+   
+   
+ X 
+ XX
+ X 
+ X 
+
+Run:
+   
+   
+   
+   
+   
+   
+   
+X  
+XX 
+ X 
+
+Run:
+   
+   
+   
+   
+   
+   
+   
+   
+ XX
+ XX
+
+Run:
+   
+   
+   
+   
+   
+   
+  X
+  X
+  X
+  X
+
+Run:
+   
+   
+   
+   
+   
+   
+ X 
+ XX
+  X
+  X
+
+Run:
+   
+   
+   
+   
+   
+   
+   
+X  
+X X
+  X
+
+Run:
+   
+   
+   
+   
+   
+   
+ X 
+ X 
+ X 
+ XX
+
+Run:
+   
+   
+   
+   
+   
+   
+   
+  X
+ XX
+ XX
+
+Run:
+   
+   
+   
+   
+   
+   
+ X 
+ XX
+ X 
+ XX
+
+Run:
+   
+   
+   
+   
+   
+   
+   
+X  
+XX 
+ XX
+
+Run:
+   
+   
+   
+   
+   
+   
+   
+   
+XX 
+XX 
+
+Run:
+   
+   
+   
+   
+   
+   
+   
+  X
+X X
+X  
+
+Run:
+   
+   
+   
+   
+   
+   
+ X 
+ XX
+X  
+X  
+
+Run:
+   
+   
+   
+   
+   
+   
+X  
+X  
+X  
+X  
+
+forever

@@ -1,0 +1,1 @@
+CompInOut  M:\Contest\2016\PNW2016ProbC\PNW2016ProbC\bin\Debug\PNW2016ProbC.exe M:\Contest\2016\recap\Cameras

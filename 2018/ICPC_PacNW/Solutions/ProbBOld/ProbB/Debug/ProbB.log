@@ -1,0 +1,27 @@
+﻿  ProbP.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xutility(141,56): error C2794: 'value_type': is not a member of any direct or indirect base class of 'std::iterator_traits<_FwdIt>'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xutility(141,56): error C2794:         with
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xutility(141,56): error C2794:         [
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xutility(141,56): error C2794:             _FwdIt=long
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xutility(141,56): error C2794:         ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xutility(2223): message : see reference to alias template instantiation 'std::_Iter_value_t<long>' being compiled
+C:\Users\JWright6\JimWright\JimsCode\Contests\2018\ICPC_PacNW\Div1\ProbB\ProbB\ProbP.cpp(71): message : see reference to function template instantiation 'void std::fill<long,int>(const _FwdIt,const _FwdIt,const _Ty &)' being compiled
+C:\Users\JWright6\JimWright\JimsCode\Contests\2018\ICPC_PacNW\Div1\ProbB\ProbB\ProbP.cpp(71): message :         with
+C:\Users\JWright6\JimWright\JimsCode\Contests\2018\ICPC_PacNW\Div1\ProbB\ProbB\ProbP.cpp(71): message :         [
+C:\Users\JWright6\JimWright\JimsCode\Contests\2018\ICPC_PacNW\Div1\ProbB\ProbB\ProbP.cpp(71): message :             _FwdIt=long,
+C:\Users\JWright6\JimWright\JimsCode\Contests\2018\ICPC_PacNW\Div1\ProbB\ProbB\ProbP.cpp(71): message :             _Ty=int
+C:\Users\JWright6\JimWright\JimsCode\Contests\2018\ICPC_PacNW\Div1\ProbB\ProbB\ProbP.cpp(71): message :         ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xutility(2223,1): error C2938: 'std::_Iter_value_t' : Failed to specialize alias template
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xutility(2241,19): error C2976: 'std::_Fill_memset_is_safe': too few template arguments
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xutility(2226): message : see declaration of 'std::_Fill_memset_is_safe'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xutility(2241,1): error C2059: syntax error: ')'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xutility(2241,1): error C2143: syntax error: missing ';' before '{'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xutility(2242,1): error C2664: 'void *memset(void *,int,size_t)': cannot convert argument 1 from '_Iter' to 'void *'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xutility(2242,1): error C2664:         with
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xutility(2242,1): error C2664:         [
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xutility(2242,1): error C2664:             _Iter=long
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xutility(2242,1): error C2664:         ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xutility(2242,22): message : Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or function-style cast
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\vcruntime_string.h(60,15): message : see declaration of 'memset'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xutility(2243,1): error C2181: illegal else without matching if
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xutility(2245,1): error C2100: illegal indirection

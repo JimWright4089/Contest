@@ -1,0 +1,5 @@
+Because of the first rule (a round with K players has to have the top K rated players), each round with K players has someone in the top half of remaining players defeating someone in the bottom half of remaining players. 
+
+The actual assignment of winners to losers can be computed greedily. For each loser, if they can make a close game with the worst winner, pair them up. Otherwise, assign them to the strongest remaining winner. This assignment is always as good or better than any other assignment by an exchange argument.
+
+Overall time complexity: O(n 2^n)

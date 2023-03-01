@@ -1,0 +1,1 @@
+CompInOut  M:\Contest\2016\PNW2016ProbJ\PNW2016ProbJ\bin\Release\PNW2016ProbJ.exe M:\Contest\2016\recap\Shopping

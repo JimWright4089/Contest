@@ -1,0 +1,7 @@
+Let E(S) be the expected number of turns in a game if only the children in S are still playing. As a base case, if there are two or fewer children in S, then E(S) = 0.
+
+For each child in S, we can compute the probability that the child sits out in O(n) time by summing the probability of the two cases they sit out: they put in black, all others put in white and vice-versa. Let the probability that the child sits out be sit_i. Then we have the following recurrence:
+
+E(S) = 1 + sit_1 E(S \ {1}) + sit_2 E(S \ {2}) + ... + (1 - \sum sit_i) E(S).
+
+Each sit_i can be computed in O(N), and there are 2^n values of S for an overall time complexity of O(N^2 * 2^N). This can be improved to O(N * 2^N) by computing sit_i from the value of sit_{i - 1}, but this optimisation is not needed.

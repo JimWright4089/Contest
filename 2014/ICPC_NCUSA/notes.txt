@@ -1,0 +1,39 @@
+North Central 2014:
+
+     A -  Efficiency of Binary Search
+          Time:  0.136sec
+     B -  Preorder traversal
+          Time:  0.006sec
+     C -  Rank order
+          Time:  2.072sec
+     D -  Server
+          Time:  0.004sec
+     E -  Aquarium Tank
+          Time:  0.007sec
+     F -  Restaurant Ratings
+          Time:  0.007sec
+     G -  Locked Treasure
+          Time:  0.006sec
+     H -  Continued Fraction
+          Time:  0.005sec
+     I -  Anagram Pyramids
+          Time:  0.612sec
+
+Solutions should run very quickly (less than one second) problems 
+A, B, D, E, F, G and H, and in 5 seconds or less for problems C and I.  
+Time limits for problems A, B, D, E, F, G and H will be ten (10) 
+seconds, and for problems C and I the time limits will be 60 seconds.  
+Recognizing that all computers are different but still needing to 
+apply some absolute standard, these time limits are already set well 
+beyond what should be expected, so please do NOT allow additional time 
+(though out of curiosity judges may check to see how much longer a 
+solution might take.)
+ 
+I have worked to get test data that will bog down brute force 
+approaches to those problems where we don’t want that to be acceptable.  
+My brute force solutions to a few problems run in well over a minute 
+when the efficient algorithm is under a second.
+
+Ed
+====================================================================
+

@@ -1,0 +1,1 @@
+CompInOut  M:\Contest\2016\PNW\PNW2016ProbE\PNW2016ProbE\bin\Debug\PNW2016ProbE.exe M:\Contest\2016\PNW\recap\EnclosureArea

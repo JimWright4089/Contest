@@ -1,0 +1,1 @@
+To check if a string T is a substring of some cyclic string S, we can instead check if T is a substring of the normal string (S + S). This problem then boils down to checking if every proper substring of rev(S) is a substring of S + S. This is true if and only if rev(S) is a substring of (S + S).

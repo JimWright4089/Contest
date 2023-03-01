@@ -1,0 +1,11 @@
+10
+rich: upper middle lower upper upper middle lower upper upper middle lower upper upper middle lower upper upper middle lower upper upper middle lower upper upper middle lower upper upper middle lower upper upper middle lower upper upper middle class
+mona: upper upper upper upper upper upper upper upper upper upper upper upper upper upper upper upper upper upper upper upper upper upper upper upper upper upper upper upper upper upper upper upper upper upper upper upper upper upper upper upper class
+dave: lower lower lower  lower lower lower middle lower lower lower lower  lower lower lower middle lower lower lower lower  lower lower lower middle lower lower lower lower  lower lower lower middle lower lower lower lower  lower lower lower class
+charles: lower middle lower  lower lower lower middle lower lower lower lower  lower lower lower middle lower lower lower lower  lower lower lower middle lower lower lower lower  lower lower lower middle lower lower lower lower  lower lower lower class
+tom: middle class
+william: lower middle class
+carl: lower class
+violet: middle class
+frank: lower class
+mary: upper class

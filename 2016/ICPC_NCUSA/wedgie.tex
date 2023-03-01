@@ -1,0 +1,77 @@
+\documentclass{article}
+
+% Macros to make this problem look like the rest of our problems.
+\usepackage{icpc_problem}
+
+% Title of your problem.
+\title{L: Wedgie}
+
+% Who made the problem
+\author{Charles Riedesel}
+
+% Keywords, from a set of standard keywords.
+\keywords{simple}
+
+% Anything you want to say about the problem, including how one could solve it
+\comments{Picture a block of cheese and a deranged chef with a long straight 
+knife ready to hack into it.  He takes a couple whacks at the cheese.  Your
+task is to determine if the cheese is separated into at least two pieces.
+You are given the size of the cheese and three coordinates of the two cuts.
+Specifically, the starting point (at a corner or along an edge) and where the
+knife stops along two sides.}
+
+% Difficulty on a 1..10 scale.
+\difficulty{1}
+
+\begin{document}
+
+\begin{problemDescription}
+Picture a rectangular block of cheese sitting on a solid tabletop and a 
+deranged chef (yes, just fresh off the range!) with a long straight knife 
+ready to hack into it.  He takes a couple whacks at the cheese.  Your
+task is to determine if the cheese is separated into at least two pieces.
+You are given the size of the cheese and three coordinates of the two cuts.
+All measurements are integral and of the same units.  Specifically, the 
+points include the starting point (at a corner or along an edge) and where the
+knife stops along two sides. Because of the table, no cut starts from the
+bottom.  It is possible that the knife goes all the way through, cleaving
+the cheese on a single whack.  It is also possible that the two whacks 
+intersect, separating out a wedge of cheese.  The tip of the knife is
+always outside the block of cheese.
+
+In case the cheese is fully cleaved in a single stroke, the exiting points (always
+two, as specified in the problem) will be the two opposite ends of a line (always
+at edges or corners) on a face being exited.  You may assume this means the final 
+two exit points of the knife from the block.
+\end{problemDescription}
+
+\begin{inputDescription}
+Input may consist of multiple cases. Each line of a case contains 21 
+non-negative integers.  The first 3 are the dimensions of the cheese: 
+length, width, and height.  Consider the cheese to be sitting in the 
+corner of the first quadrant in 3-D space starting at location 0, 0, 0.
+Following this are the descriptions of the two whacks, each consisting of
+9 values.  The first 3 of each whack are the coordinates of where the knife 
+first enters the cheese along the length, width, and height.  Similarly the 
+next two sets of 3 are coordinates for the two ending points somewhere on the 
+surface of the block.  An input line showing the cheese block being of size
+0, 0, 0 is the sentinel for the end of input.  Do not process it.
+\end{inputDescription}
+
+\begin{outputDescription}
+For each case, display the case number followed by the word ``touche!" if
+the cheese was split or ``must be hard cheese!" if still intact, formatted 
+as in the sample.
+\end{outputDescription}
+
+\begin{sampleInput}
+10 10 10     5 0 10   5 0 5   5 10 5      6 0 10   6 0 5   6 10 5
+10 10 10     5 0 10   5 0 5   5 10 5      10 0 6   4 0 6   4 10 6
+0 0 0    1 2 3   4 5 6  7 8 9    1 2 3   4 5 6   7 8 9
+\end{sampleInput}
+\begin{sampleOutput}
+Case 1: must be hard cheese!
+Case 2: touche!
+\end{sampleOutput}
+
+\end{document}

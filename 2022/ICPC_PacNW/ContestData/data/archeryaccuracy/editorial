@@ -1,0 +1,15 @@
+Consider fixing some ordering that the manager submits.
+Then we can compute, for each 0≤i≤n, the probability that the team will be at +s points (and similarly, -s points) after i rounds (for the appropriate threshold s).
+This probability depends only on which players were used in the first i rounds, and their order.
+We note that, if we fix the set of players used so far, and the ordering of the remaining n-i players, it is always optimal to order the first i players to maximize the probability that the team will be at +s points (rather than -s).
+
+This suggests a dynamic programming approach.
+We can compute, for each subset P of players, the maximum probability f(P) of achieving a score of +s after |P| rounds (where s is the |P|-th smallest threshold).
+Given a set P, we pick the player in round i that maximizes this probability, given optimal orderings for previous rounds from f.
+To do this, we need to be able to compute transition probabilities: if the current threshold is s, the current score is x, and the current player has accuracy p, what is the chance we end up at +s (versus -s)?
+
+To compute these transitions, we can represent (for each accuracy p and target s) the scores moving in the interval [-s,+s] as a Markov chain.
+We transition to the next-higher score with probability p, and next-lower score with probability 1-p, except ±s will be absorbing states.
+We can then determine the probability of ending at +s versus -s by exponenting the transition matrix to a high power.
+Some care should be had to compute these transitions not too often (as they are expensive), and/or using linear algebra tricks to compute the result in O(n^3) without a log(precision) factor.
+Alternatively, one can derive an explicit formula for these transition probabilities.

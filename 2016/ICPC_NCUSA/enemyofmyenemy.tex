@@ -1,0 +1,86 @@
+\documentclass{article}
+
+% Macros to make this problem look like the rest of our problems.
+\usepackage{icpc_problem}
+
+% Title of your problem.
+\title{C: Enemy of my Enemy is my Friend}
+
+% Who made the problem
+\author{Charles Riedesel}
+
+% Keywords, from a set of standard keywords.
+\keywords{medium}
+
+% Anything you want to say about the problem, including how one could solve it
+\comments{Consider the claim ``The enemy of my enemy is my friend."  Alliances
+can become very complicated and intertwined.  Consider a listing of all pairs
+of persons, specifying if they are friends or enemies.  Determine the size
+of the largest group of mutual friends, assuming the listing is valid
+(having no contradictions).}
+
+% Difficulty on a 1..10 scale.
+\difficulty{1}
+
+\begin{document}
+
+\begin{problemDescription}
+Consider the old maxim ``The enemy of my enemy is my friend".  In difficult times,
+alliances can become very convoluted.  Your task is to bring a bit of clarity to
+such times, assuming the maxim does describe reality.  You will be provided with
+a list of relationships between pairs of persons.  The relationship may be ``friend"
+or ``enemy".  There may be additional relationships that are not included in
+the list, but these can all be deduced by applying the above maxim.  Your specific
+task is to determine if a proposed invitation list includes only mutual friends.
+Consider only the reported friends and the friends deduced by using the maxim.
+\end{problemDescription}
+
+\begin{inputDescription}
+Input may consist of multiple cases.  Each case begins with a line containing 
+exactly two integers representing the number of lines of relationship information 
+and the number of proposed invitation lists (one per line) respectively for the case.  
+
+Each of the relationship lines begins with either the letter `f' or `e', a number {\em p} 
+from 2 to 5, followed by a list of {\em p} names, all delineated by spaces.  In 
+case of `f', the names will be of mutual friends.  In case of `e', the names will 
+be of mutual enemies.  (Hint - the number of mutual enemies will never be more 
+than 2.  Why?)
+
+Each of the proposed invitation list lines begins with a number {\em i} from 2 to 8
+followed by {\em i} of the names included in the relationships.
+Again, everything is delineated by spaces.
+
+Names will consist of single words of 2 to 10 letters.  Input is case sensitive.
+There will be from 1 to 100 names in a case.  The last case is followed by a line
+with two 0's (zeroes).
+
+The input will be such that no contradictory relation status will be deducible.
+\end{inputDescription}
+
+\begin{outputDescription}
+For each case, display the case number followed by the `yes' and `no' answers to 
+each of the proposed invitation lists, formatted as in the sample.  A `yes' means
+the list is of mutual friends.  A `no' means there is at least one enemy 
+relationship or non-existant relationship (a couple that are neither friend or
+enemy) in the list.
+\end{outputDescription}
+
+\begin{sampleInput}
+6  4
+e  2  Tom  Fay
+f  3  Fay  Mae  Joe
+f  2  Al  Mae
+e  2  Sam  Tom
+e  2  Tom  Al
+f  2  Sam  Mae
+3  Mae  Fay  Joe
+3  Sam  Al  Fay
+2  Joe  Al
+3  Fay  Sam  Tom
+0  0
+\end{sampleInput}
+\begin{sampleOutput}
+Case 1: yes yes no no
+\end{sampleOutput}
+
+\end{document}

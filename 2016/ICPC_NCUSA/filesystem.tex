@@ -1,0 +1,94 @@
+\documentclass{article}
+
+% Macros to make this problem look like the rest of our problems.
+\usepackage{icpc_problem}
+
+% Title of your problem.
+\title{D: File System}
+
+% Who made the problem
+\author{Kathryn Traxler}
+
+% Keywords, from a set of standard keywords.
+\keywords{simple}
+
+% Anything you want to say about the problem, including how one could solve it
+\comments{Romeo and Juliet are sloths hanging in adjacent trees with branches
+negative.  Y is 0 (bottom of the trunk) or higher.}
+
+% Difficulty on a 1..10 scale.
+\difficulty{1}
+
+\begin{document}
+
+\begin{problemDescription}
+Given a series of file system commands and queries, output the contents of the file 
+requested by each query (a query is a filename to be printed out). If the query 
+is invalid (e.g. path does not exist), the text $invalid$ must be printed.
+The following commands must be supported:
+
+\begin{itemize}
+\item echo "$<$content$>$" $<$file$>$, Creates $<$file$>$ with $<$content$>$ if 
+  $<$file$>$ does not 
+   exist. If $<$file$>$ exists, the contents of $<$file$>$ will be replaced 
+   with $<$content$>$. 
+   $<$content$>$ will only contain ASCII numbers, letters, *, ?, $<$, and $>$.
+\item cp $<$source$>$ $<$destination$>$, Copies $<$source$>$ to $<$destination$>$
+\item mv $<$source$>$ $<$destination$>$, Moves $<$source$>$ to $<$destination$>$
+\item rm $<$file$>$, Deletes $<$file$>$
+\item mkdir $<$dir$>$, creates a directory $<$dir$>$
+\item rmdir $<$dir$>$, Removes $<$dir$>$ and all of its contents
+\end{itemize}
+
+Notes:
+\begin{enumerate}
+\item $<$dir$>$, $<$file$>$, $<$source$>$, and $<$destination$>$ components will only contain 
+numbers and letters, with components separated by a /.
+\item $cp$ and $mv$ commands to the same destination will not appear. 
+\item Current (.) and parent (..) directory designations will not appear. 
+\item Only $mkdir$ can create a directory.  $echo$, $cp$, $mv$ can only access files
+on existing paths.
+\end{enumerate}
+
+\end{problemDescription}
+
+\begin{inputDescription}
+There may be multiple test cases.  Each case consists of a series of commands
+followed by a series of files to print.  The first line of a case contains two
+integers $C$ $(0 < C < 100)$, indicating the number of commands and
+ $Q$ $(0 < Q < 20)$, indicating the number of filenames that will have their 
+contents printed.  The next $C$ lines will contain commands to generate the filesystem. 
+The folder that the filesystem starts in may be ignored. In other words, the current directory 
+(./) may be assumed.  The next $Q$ lines will contain filenames (or a path \& filename, 
+e.g. myfolder/myfile) to print out the contents of a given file.  Following the last
+case will be a line containing just 0 0 (zeroes).
+\end{inputDescription}
+
+\begin{outputDescription}
+For each case, display the case number on one line, then the query number followed by 
+the file contents, one per line, formatted as in the sample. Output the contents of 
+the file that a query requests or `invalid' if the file does not exist.
+\end{outputDescription}
+
+\begin{sampleInput}
+2  2
+echo "This is foo" foo
+cp foo bar
+foo
+bar
+3  1
+mkdir dir
+echo "Bar" bar
+mv bar dir/bar
+bar
+0  0
+\end{sampleInput}
+\begin{sampleOutput}
+Case 1:
+Query 1: This is foo
+Query 2: This is foo
+Case 2:
+Query 1: invalid
+\end{sampleOutput}
+
+\end{document}

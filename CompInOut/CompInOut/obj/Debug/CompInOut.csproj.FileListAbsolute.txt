@@ -1,0 +1,5 @@
+M:\Contest\2016\CompInOut\CompInOut\bin\Debug\CompInOut.exe.config
+M:\Contest\2016\CompInOut\CompInOut\bin\Debug\CompInOut.exe
+M:\Contest\2016\CompInOut\CompInOut\bin\Debug\CompInOut.pdb
+M:\Contest\2016\CompInOut\CompInOut\obj\Debug\CompInOut.exe
+M:\Contest\2016\CompInOut\CompInOut\obj\Debug\CompInOut.pdb

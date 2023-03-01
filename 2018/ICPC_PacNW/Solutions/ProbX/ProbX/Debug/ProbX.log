@@ -1,0 +1,7 @@
+﻿  ProbX.cpp
+C:\Users\JWright6\JimWright\JimsCode\Contests\2018\ICPC_PacNW\Div2\ProbX\ProbX\ProbX.cpp(55,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\JWright6\JimWright\JimsCode\Contests\2018\ICPC_PacNW\Div2\ProbX\ProbX\ProbX.cpp(68,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\JWright6\JimWright\JimsCode\Contests\2018\ICPC_PacNW\Div2\ProbX\ProbX\ProbX.cpp(184,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\JWright6\JimWright\JimsCode\Contests\2018\ICPC_PacNW\Div2\ProbX\ProbX\ProbX.cpp(196,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\JWright6\JimWright\JimsCode\Contests\2018\ICPC_PacNW\Div2\ProbX\ProbX\ProbX.cpp(204,23): warning C4018: '<': signed/unsigned mismatch
+  ProbX.vcxproj -> C:\Users\JWright6\JimWright\JimsCode\Contests\2018\ICPC_PacNW\Div2\ProbX\Debug\ProbX.exe

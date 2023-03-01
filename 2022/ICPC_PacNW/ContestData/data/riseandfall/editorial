@@ -1,0 +1,4 @@
+We can solve this greedily. Scan the digits from left to right, keeping track of whether the sequence is
+in the nondecreasing or nonincreasing phase. If we are in the nondecreasing phase, we can unconditionally
+append the next character, perhaps entering the nonincreasing phase if necessary. Otherwise, we must
+make sure to emit a digit no larger than the most recently emitted digit.

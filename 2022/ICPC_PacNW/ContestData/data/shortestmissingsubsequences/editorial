@@ -1,0 +1,13 @@
+To start, it will be helpful to define for each index i∈[|s|] and character c∈v, the value next(i,c), equal to the index of the first occurrence of c in s that comes later than index i (or |s|+1, if there are no later c characters).
+This can be comupted in O(|v||s|) time+space using dynamic programming.
+
+Next, before processing any queries, we want to determine the length of a SMS of s.
+We build up such a SMS t greedily, beginning with the empty string.
+Then, until t is a missing subsequence of s, we will append the character c∈v to t that maximizes the length of the shortest prefix of s that has t as a subsequence.
+Stop once no prefix of s has t as a subsequence (that is, t is a missing subsequence of s).
+It can be shown that the resulting t is a SMS.
+
+Finally, to answer our queries, we must make two checks.
+First, we quickly check whether the length of the query string equals the length of t.
+Second, we check whether the query is in fact a suqsequence of s or not.
+The latter we can do in O(|query string|), similar to before when computing t, again greedily using our next array (recursively compute, for each prefix of the query string, the shortest prefix of s that has it as a subsequence).

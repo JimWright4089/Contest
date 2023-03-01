@@ -1,0 +1,1 @@
+CompInOut  M:\Contest\2016\PNW2016ProbY\PNW2016ProbY\bin\Debug\PNW2016ProbY.exe M:\Contest\2016\recap\ZigZag

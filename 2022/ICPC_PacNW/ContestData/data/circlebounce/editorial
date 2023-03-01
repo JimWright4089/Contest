@@ -1,0 +1,10 @@
+First, we observe that between each pair of successive bounces, the ball travels the same distance.
+In particular, each bounce rotates the ball clockwise around the origin by the same angle θ.
+While we cannot compute θ exactly using floating-point numbers, we can represent this rotation exactly using integers.
+One way to do this is using a 2×2 rotation matrix of rational numbers.
+Computing the (n+1)-st time the ball touches the circle can be done by taking the (n+1)-st power of such a matrix.
+To avoid giant numbers, the intermediate calculations can all be done modulo M.
+
+A slightly simpler approach would be to instead represent points in the plane by complex numbers.
+Rotation by θ now corresponds to multiplication by a Gaussian rational.
+Exponentiation here is a little simpler, and can be again be done mod M.

@@ -1,0 +1,6 @@
+M:\Contest\2016\PNW\PNW2017ProbI\PNW2017ProbI\bin\Debug\PNW2017ProbI.exe.config
+M:\Contest\2016\PNW\PNW2017ProbI\PNW2017ProbI\obj\Debug\PNW2017ProbI.csprojResolveAssemblyReference.cache
+M:\Contest\2016\PNW\PNW2017ProbI\PNW2017ProbI\bin\Debug\PNW2017ProbI.exe
+M:\Contest\2016\PNW\PNW2017ProbI\PNW2017ProbI\bin\Debug\PNW2017ProbI.pdb
+M:\Contest\2016\PNW\PNW2017ProbI\PNW2017ProbI\obj\Debug\PNW2017ProbI.exe
+M:\Contest\2016\PNW\PNW2017ProbI\PNW2017ProbI\obj\Debug\PNW2017ProbI.pdb

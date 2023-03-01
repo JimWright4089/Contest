@@ -1,0 +1,11 @@
+# editors
+*.swp
+*~
+*.pdb
+*.cache
+*.obj
+*.ilk
+*.idp
+
+# build
+/build*/

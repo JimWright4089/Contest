@@ -1,0 +1,1 @@
+CompInOut  M:\Contest\2016\PNW\PNW2016ProbK\PNW2016ProbK\bin\Release\PNW2016ProbK.exe M:\Contest\2016\PNW\recap\TournamentWins

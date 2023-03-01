@@ -1,0 +1,5 @@
+There are only 10000 possible passwords so it is possible to check all of them with brute force.
+
+A faster and simpler solution to code involves seeing that for each position, either one digit
+is valid or two digits are valid. We can start by assuming the answer is 1 and doubling
+it every time we see a position where two digits are valid.

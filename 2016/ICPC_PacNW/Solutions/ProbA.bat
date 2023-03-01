@@ -1,0 +1,1 @@
+CompInOut  M:\Contest\2016\PNW2016ProbA\PNW2016ProbA\bin\Debug\PNW2016ProbA.exe M:\Contest\2016\recap\Alphabet

@@ -1,0 +1,1 @@
+CompInOut  M:\Contest\2015\PNW2015ProbC\PNW2015ProbC\bin\Debug\PNW2015ProbC.exe M:\Contest\2015\recap\Classy

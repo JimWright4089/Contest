@@ -1,0 +1,105 @@
+\documentclass{article}
+
+% Macros to make this problem look like the rest of our problems.
+\usepackage{icpc_problem}
+
+% Title of your problem.
+\title{I: Intruder Alert}
+
+% Who made the problem
+\author{Charles Riedesel}
+
+% Keywords, from a set of standard keywords.
+\keywords{simple}
+
+% Anything you want to say about the problem, including how one could solve it
+\comments{comments}
+
+% Difficulty on a 1..10 scale.
+\difficulty{1}
+
+\begin{document}
+
+\begin{problemDescription}
+A team of secret agents have been seated for a top-secret briefing.  The rows of
+chairs are staggered so that attendees can easily interact with the two in
+front, the two in back and the one on either side, assuming the attendee is
+not along the edge, but notably not the one straight ahead or back two rows.  
+We will refer to these potentially six adjacent persons in this honeycomb
+cell-like arrangement as neighbors of the secret agent in the middle of the 
+cell.  Furthermore the rows are 
+arranged such that the chairs on the outside form a convex hull with no gaps.  
+The only allowed angles of the sides of the hull allowed by this geometry are 
+then 0, 45, and 135 degrees.  All the chairs are filled. See example below.
+
+Unfortunately there is an intruder.  No one really knows anyone else yet, and
+each has to depend on whom his/her neighbors claim to be.  The intruder must 
+lie about his/her identity, claiming to be one of the secret agents on the
+attendance roll.  He/she uses the same false alias when conversing with any
+of the neighbors.  Your task is to root out the intruder, or at least the name
+of the secret agent he/she is claiming to be.  
+
+It was detected that there is one more person than there were invitees, so
+the organizers had each supposed agent, as he/she left in random order after
+the meeting, list the up to 6 neighbors. Unfortunately, they did not think
+to ask the agent's own name, because if they had, they would have quickly
+been able to narrow the intruder down to the two persons with the same name.
+\end{problemDescription}
+
+\begin{inputDescription}
+Input may consist of multiple cases.  The first line of a case contains a 
+positive integer $n$, less than 100, representing the number of invited secret
+agents.  Each of the following $n+1$ lines contains the report of an agent
+or the imposter.  The number of rows may range from 1 to $n+1$. The report 
+consists of six numbers, representing each
+neighboring secret agent's claimed identity, such as 007, in clockwise order 
+of seating starting at the 3:00 position.  A designation of 000 indicates no 
+neighbor, which only happens if the agent is seated along the edge.  Spaces 
+delimit the numbers. It is the value of the number that is significant, 
+eg. 007 and 07 would indicate the same agent. The numeric values of the agent
+designations range from 1 to $n$.  The last case is followed by 
+a line containing the number 0 (zero).  The reports are listed in arbitrary 
+order, as described by the scenario above, without regard to seating order.
+\end{inputDescription}
+
+\begin{outputDescription}
+For each case, display the case number followed by the claimed identity, 
+formatted as in the sample with 3 digits.   If it is impossible to identify 
+the claimed name of the intruder, print the message ``sorry".  Use single 
+spaces as delimiters.
+\end{outputDescription}
+
+\begin{sampleInput}
+13
+000  03  02  0  0  0
+003  005 04  00 00 001
+00   06  05  02 1  00
+5  8  7  0  0  2
+6  9  8  4  2  3
+0 010 09  5  3  00
+8  12  11  00  00  04
+09 013 12  007 04  05
+10  11 13  08  05  6
+0  0  11  009  06  0
+11 0  0  0  0  007
+13 0  0  011  7  8
+11  0  0  12  8  9
+00 00 00 13  9  10
+0
+\end{sampleInput}
+\begin{sampleOutput}
+Case 1: 011
+\end{sampleOutput}
+
+\begin{verbatim}
+               Example                 Not Valid
+                  0                        0
+row 1   45   X X X X X X X              X X X X
+row 2       X X N N X X X                X X X
+row 3      X X N P N X X  45        90  X X X X 90
+row 4  135  X X N N X X                  X X X
+row 5        X X X X X                  X X X X
+                0                          0
+\end{verbatim}
+The six N's represent the neighbors of agent P.  Angles are shown in degrees.
+\end{document}

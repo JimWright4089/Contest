@@ -1,0 +1,1 @@
+CompInOut  M:\Contest\2015\PNW2015ProbL\PNW2015ProbL\bin\Debug\PNW2015ProbL.exe M:\Contest\2015\recap\Millionaire

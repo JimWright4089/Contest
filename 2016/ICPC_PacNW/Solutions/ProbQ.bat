@@ -1,0 +1,1 @@
+CompInOut  M:\Contest\2016\PNW\PNW2016ProbQ\PNW2016ProbQ\bin\Debug\PNW2016ProbQ.exe M:\Contest\2016\PNW\recap\ContestScore

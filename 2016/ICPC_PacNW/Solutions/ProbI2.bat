@@ -1,0 +1,1 @@
+CompInOut  M:\Contest\2016\PNW\PNW2017ProbI\PNW2017ProbI\bin\Debug\PNW2017ProbI.exe M:\Contest\2016\PNW\recap\Postman

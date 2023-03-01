@@ -1,0 +1,4 @@
+Imagine that we have rooted the tree arbitrarily. We can precompute for each node, its depth and its parent.
+To check if two nodes are distance at most 3 from each other, while the two nodes are not equal,
+we take the deeper node and replace it with its parent. If we do this step more than 3 times and the
+two nodes are not equal, then the given permutation is invalid.

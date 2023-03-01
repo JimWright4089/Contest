@@ -1,0 +1,13 @@
+For the rest of this editorial, a "good triple" is a triple of islanders whose hats have values such that the XOR of two hats is equal to the third.
+
+In the case where there are 3 islanders, we know that all islanders are involved in the only possible good triple, so they will raise their hands on the first day.
+
+If there are 4 islanders, there are two cases:
+1. Some islander does not see a good triple. This means they must be part of some good triple and will raise their hand on day 1.
+2. Every islander sees the other 3 islanders make a good triple, so no one raises their hands on day one. Once no islander raises their hand on day 1, they all learn that all triples of islanders are good triples, so they raise their hands on day 2.
+
+Generalizing this logic, consider some set S of islanders that is known to have a good triple. Let f(S) be the largest subset of S such that no triple in f(S) is a good triple. Then after |S| - f(S) days, any islander not in f(S) will raise their hand, as all islanders in f(S) do not make a good triple and no islander in S \ f(S) has raised their hand yet.
+
+To implement this idea, find all good triples in O(n^3) and mark them. Then for each set S of islanders, either the set does not have a good triple, in which case n - |S| is a potential answer, or it does have a good triple and all sets which add an extra islander from this set can also be marked as having a good triple.
+
+The overall runtime is O(n^3 + n 2^n). 

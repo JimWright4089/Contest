@@ -1,0 +1,60 @@
+\documentclass{article}
+
+% Macros to make this problem look like the rest of our problems.
+\usepackage{icpc_problem}
+
+% Title of your problem.
+\title{H: Corrupted Gradebook}
+
+% Who made the problem
+\author{Ryan Patrick}
+
+% Keywords, from a set of standard keywords.
+\keywords{simple}
+
+% Anything you want to say about the problem, including how one could solve it
+\comments{
+knife stops along two sides.}
+
+% Difficulty on a 1..10 scale.
+\difficulty{1}
+
+\begin{document}
+
+\begin{problemDescription}
+A gradebook has been corrupted so that the columns have been removed. Each 
+student's record simply contains a single string of digits. Knowing that the 
+string of digits must have come from $n$ different assignments (each with a 
+possible integer grade between 0 and 100, inclusive), parse the string so that 
+the average of the $n$ grades is maximized. 
+\end{problemDescription}
+
+\begin{inputDescription}
+Input may consist of multiple cases, with each having a one line description. 
+The line will contain an integer from 1 to 25 representing the number of
+grades.  After some white space there will be a string of digits.  This is the 
+string to parse into the (optimal) original grades.  The last case is followed 
+by a line with two 0's (zeroes).
+
+When correctly parsed, none of the grades will have leading 0's (zeroes), though
+individual grades may have value of 0, each shown simply as '0'.
+\end{inputDescription}
+
+\begin{outputDescription}
+For each case, display the case number followed by the optimal average grade,
+rounded to the nearest integer.  Format as in the sample.
+\end{outputDescription}
+
+\begin{sampleInput}
+2  835
+2  100
+1  100
+0  0
+\end{sampleInput}
+\begin{sampleOutput}
+Case 1: 44
+Case 2: 5
+Case 3: 100
+\end{sampleOutput}
+
+\end{document}

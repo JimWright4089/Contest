@@ -1,0 +1,1 @@
+CompInOut  M:\Contest\2015\PNW2015ProbF\PNW2015ProbF\bin\Debug\PNW2015ProbF.exe M:\Contest\2015\recap\FallingBlocks

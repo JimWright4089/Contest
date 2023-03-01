@@ -1,0 +1,19 @@
+Let A(i, j) be the value in the j-th column of the i-th row. Let min_cost(i, j) be the minimum cost to end in cell (i, j). For all cells where A(i, j) = 1, min_cost(i, j) = 0.
+
+Process cells in increasing order of value. For a cell (i, j) with value k, consider coming from all cells of value k - 1. This approach can be O(n^4) if there are O(n^2) cells with values k and k - 1.
+
+To speed this up, for each set of cells with the same value, compute the minimum cost to get to some such cell in each row or column. Now instead of iterating over all O(n^2) cells with the same cost, we only iterate over O(n) candidate cells that are the cheapest in a given row or column. This improves the runtime to O(n^3).
+
+A further optimization that is not necessary is to note that the cost function to go to some cell (i, j) to another cell (i', j') is of the form
+
+(i - i')^2 + min_cost(i, j)
+i^2 - 2 i i' + i'^2 + min_cost(i, j)
+
+or the equivalent with j and j'.
+
+When computing min_cost(i', j'), we can rewrite the above cost function as a line plus a fixed quadratic term. 
+
+min_cost(i', j') = i'^2 - (2 i) i' + (i^2 + min_cost(i, j))
+
+Finding the minimum value for a query over a set of linear functions can be solved using the Convex Hull Trick. This improves the runtime to O(n^2 log n).
+

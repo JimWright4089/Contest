@@ -1,0 +1,10 @@
+Instead of thinking about how to generate the lexicographically smallest valid answer key, let's check
+to see if any valid answer key exists. To do this, we can use 2-SAT. Because every student can only have
+at most one correct answer, we know that for every pair of answers that the student has submitted, at least
+one of those must be incorrect. The conjunction of all of these pairs of conditions is equivalent to saying that
+at most one of the answers is correct.
+
+Therefore, if the initial 2-SAT instance is solvable, then there exists some valid answer key. We can check to
+see if the first answer must be true by assuming it is false and solving the resulting 2-SAT instance. We
+repeat this process of locking in an answer and seeing if the instance is solvable, greedily selecting
+answers in increasing order.

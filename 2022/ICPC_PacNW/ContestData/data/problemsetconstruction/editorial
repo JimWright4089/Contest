@@ -1,0 +1,12 @@
+It's easier to compute the probability that a problem will be solved overall, since we can always scale it to be conditioned on the fact that the problem is selected by multiplying it by n / k.
+
+A team's strategy during a contest is to sort all problems by solve time and solve the ones they can in increasing order until they run out of time. A problem's difficulty is only affected by other problems who have solve time less than itself. This suggests sorting the problems in increasing order of solve time and processing them one by one.
+
+We do dynamic programming, our state is dp[i][j][m] -> probability that we've reached this state: we have considered the first i problems, we've allocated j seconds of the contest solving lower problems, and we've included m problems in our set so far.
+
+To update this state, we look at the i-th problem and get three cases:
+- We do not even take the i-th problem in our set
+- We do take the i-th problem in the set, but we aren't able to solve it
+- We do take the i-th problem in the set, and we can solve it. In this case, we can also add this probability to a global count for the i-th problem.
+
+You can look at the code for more details on the transition. In addition, to save memory, you don't need to explicitly keep track of the first index of the dp table, and can update it in place to save some memory
