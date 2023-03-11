@@ -122,6 +122,60 @@ namespace TestRunner
       }
     }
 
+    private void FixContestData(string contestDataDir)
+    {
+      string dir = contestDataDir + "\\data";
+      if (true == Directory.Exists(dir))
+      {
+        Debug.Write(dir + " ");
+        Debug.WriteLine("problem");
+      }
+      string[] subdirectoryEntries = Directory.GetDirectories(contestDataDir);
+      foreach (string comp in subdirectoryEntries)
+      {
+        string testDir = comp + "\\data";
+
+        //Debug.WriteLine(testDir);
+
+        if (true == Directory.Exists(testDir))
+        {
+          string[] subdirectoryEntries2 = Directory.GetDirectories(testDir);
+          foreach (string comp2 in subdirectoryEntries2)
+          {
+            string name = comp2.Substring(comp2.LastIndexOf("\\") + 1);
+
+            string newName = comp + "\\" + name;
+            try
+            {
+              Directory.Move(comp2, newName);
+            }
+            catch(Exception)
+            {
+              Debug.WriteLine(comp2 + " to " + newName);
+            }
+          }
+
+          string[] subdirectoryEntries3 = Directory.GetDirectories(testDir);
+          if (0 == subdirectoryEntries3.Length)
+          {
+            Debug.WriteLine(" delete " + testDir);
+            try
+            {
+              Directory.Delete(testDir);
+            }
+            catch (Exception)
+            {
+              Debug.WriteLine(" delete " + testDir + " Not Empty");
+            }
+          }
+          else
+          {
+            Debug.WriteLine(" delete " + testDir + " Not Empty");
+          }
+        }
+      }
+    }
+
     private void FixComp(string compDir)
     {
       foreach (string dirComp in DIRS)
@@ -155,6 +209,8 @@ namespace TestRunner
           Debug.WriteLine("Bad Comp Dir:" +compDir + "\\" + thecomp);
         }
       }
+
+      FixContestData(compDir + "\\ContestData");
     }
 
     private void FixYear(string yearDir)
