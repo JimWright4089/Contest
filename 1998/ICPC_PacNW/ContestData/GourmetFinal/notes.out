@@ -1,0 +1,10 @@
+Judging Notes:
+The first three lines of the above four data sets show the input data for this problem.  For a solution to be judged successful it must either:
+A.  Not echo the input but report:  "It is not possible to complete this schedule." 
+B.  Echo the three lines of input data followed by two lines showing a successful seating schedule.
+
+Output for each data set is to be separated by a blank line.
+
+For the above data sets, the first set can't have a solution because A & B must dine with H and A, B, & H must dine with O, but A&B can't diner together again.  The fourth set has no solution because A & B must dine with D and A, B, & D must dine with K, but A&B can't diner together again.
+
+The second and  third data sets have a successful seating schedule however the last two lines may be interchanged.  The four letter groups and the letters within a group may be in any order on a line.  

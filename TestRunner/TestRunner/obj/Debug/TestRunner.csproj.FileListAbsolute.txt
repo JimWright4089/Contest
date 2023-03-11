@@ -1,0 +1,10 @@
+C:\work\JimsCode\Contest\bin\TestRunner.exe.config
+C:\work\JimsCode\Contest\bin\TestRunner.exe
+C:\work\JimsCode\Contest\bin\TestRunner.pdb
+C:\work\JimsCode\Contest\TestRunner\TestRunner\obj\Debug\TestRunner.csproj.AssemblyReference.cache
+C:\work\JimsCode\Contest\TestRunner\TestRunner\obj\Debug\TestRunner.Properties.Resources.resources
+C:\work\JimsCode\Contest\TestRunner\TestRunner\obj\Debug\TestRunner.TestRunner.resources
+C:\work\JimsCode\Contest\TestRunner\TestRunner\obj\Debug\TestRunner.csproj.GenerateResource.cache
+C:\work\JimsCode\Contest\TestRunner\TestRunner\obj\Debug\TestRunner.csproj.CoreCompileInputs.cache
+C:\work\JimsCode\Contest\TestRunner\TestRunner\obj\Debug\TestRunner.exe
+C:\work\JimsCode\Contest\TestRunner\TestRunner\obj\Debug\TestRunner.pdb

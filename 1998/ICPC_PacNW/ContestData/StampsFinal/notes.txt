@@ -1,0 +1,28 @@
+The first five examples are just the sample data.
+
+7 (3): 1 1 2 3 
+4 (2): 1 3 
+6 ---- none
+2 (2): 1 1 
+3 (2): tie
+
+The next two examples test their memory allocation by having *lots*
+of different possible combinations (for the second problem).  If
+my solution runs too slowly, delete a few of the '2's in the data file.
+But don't delete too many - the point is efficiency!
+
+2 (2): 1 1 
+8 (4): tie
+
+The next five examples are just some simple tests.
+
+2 (1): 2 
+5 (2): 1 4 
+10 (4): 1 2 3 4 
+20 (4): tie
+33 (4): 6 8 9 10 
+
+The last two examples are also simple.
+
+4 (2): tie
+5 ---- none

@@ -1,0 +1,14 @@
+North Central 2014:
+
+     A -  Efficiency of Binary Search
+     B -  Preorder traversal
+     C -  Rank order
+     D -  Server
+     E -  Aquarium Tank
+     F -  Restaurant Ratings
+     G -  Locked Treasure
+     H -  Continued Fraction
+     I -  Anagram Pyramids
+
+====================================================================
+
