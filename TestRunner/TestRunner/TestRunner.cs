@@ -45,11 +45,11 @@ namespace TestRunner
                        "2018", "2019", "2020", "2021", "2022", "2023" };
     string[] COMPS = {  "ICPC_ECUSA", "ICPC_GNYUSA", "ICPC_MAUSA", "ICPC_MCUSA",
                         "ICPC_NCUSA", "ICPC_NEUSA", "ICPC_PacNW", "ICPC_RMUSA",
-                        "ICPC_SCUSA", "ICPC_SEUSA", "ICPC_SouthCal" };
+                        "ICPC_SCUSA", "ICPC_SEUSA", "ICPC_SouthCal", "ICPC_Worlds" };
     string[] DIRS = { "ContestData", "Docs", "Solutions" };
     string[] OLD_ANSWER_DIRS = { "output", "input" };
     string[] CUR_ANSWER_DIRS = { "sample", "secret" };
-    string[] OLD_ANSWER_Files = { "*.in", "*.out" };
+    string[] OLD_ANSWER_Files = { "*.in", "*.out", "*.ans" };
 
     const string ROOT_DIR = "..\\";
     ConfigFile mConfig = ConfigFile.GetInstance();
