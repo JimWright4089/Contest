@@ -1,11 +1,40 @@
-﻿using System;
+﻿//----------------------------------------------------------------------------
+//
+//  $Workfile: ConfigFile.cs$
+//
+//  $Revision: X$
+//
+//  Project:    ICPC Test Runner
+//
+//                            Copyright (c) 2023
+//                                Jim Wright
+//                            All Rights Reserved
+//
+//  Modification History:
+//  $Log:
+//  $
+//
+//----------------------------------------------------------------------------
+
+//----------------------------------------------------------------------------
+// Using
+//----------------------------------------------------------------------------
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TestRunner
 {
+  //----------------------------------------------------------------------------
+  //  Class Declarations
+  //----------------------------------------------------------------------------
+  //
+  // Class Name: Problem
+  // 
+  /// Purpose:
+  /// <summary>
+  ///     All the data on the problem
+  /// </summary>
+  //
+  //----------------------------------------------------------------------------
   class Problem
   {
     string mLocation = "";

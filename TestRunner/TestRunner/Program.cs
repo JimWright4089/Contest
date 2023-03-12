@@ -1,11 +1,41 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿//----------------------------------------------------------------------------
+//
+//  $Workfile: ConfigFile.cs$
+//
+//  $Revision: X$
+//
+//  Project:    ICPC Test Runner
+//
+//                            Copyright (c) 2023
+//                                Jim Wright
+//                            All Rights Reserved
+//
+//  Modification History:
+//  $Log:
+//  $
+//
+//----------------------------------------------------------------------------
+
+//----------------------------------------------------------------------------
+// Using
+//----------------------------------------------------------------------------
+using System;
 using System.Windows.Forms;
 
 namespace TestRunner
 {
+  //----------------------------------------------------------------------------
+  //  Class Declarations
+  //----------------------------------------------------------------------------
+  //
+  // Class Name: Program
+  // 
+  /// Purpose:
+  /// <summary>
+  ///     Main Entry point
+  /// </summary>
+  //
+  //----------------------------------------------------------------------------
   static class Program
   {
     /// <summary>

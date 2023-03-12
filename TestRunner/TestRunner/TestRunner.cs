@@ -1,17 +1,41 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿//----------------------------------------------------------------------------
+//
+//  $Workfile: ConfigFile.cs$
+//
+//  $Revision: X$
+//
+//  Project:    ICPC Test Runner
+//
+//                            Copyright (c) 2023
+//                                Jim Wright
+//                            All Rights Reserved
+//
+//  Modification History:
+//  $Log:
+//  $
+//
+//----------------------------------------------------------------------------
+
+//----------------------------------------------------------------------------
+// Using
+//----------------------------------------------------------------------------
+using System;
 using System.Windows.Forms;
 using System.IO;
 using System.Diagnostics;
 
 namespace TestRunner
 {
+  //----------------------------------------------------------------------------
+  //  Class Declarations
+  //----------------------------------------------------------------------------
+  //
+  // Class Name: TestRunner
+  // 
+  // Purpose:
+  //      Handle the Test Runner form
+  //
+  //----------------------------------------------------------------------------
   public partial class TestRunner : Form
   {
     string[] YEARS = { "1986", "1987", "1988", "1989", "1990", "1991", "1992", "1993",
@@ -22,7 +46,10 @@ namespace TestRunner
     string[] COMPS = {  "ICPC_ECUSA", "ICPC_GNYUSA", "ICPC_MAUSA", "ICPC_MCUSA",
                         "ICPC_NCUSA", "ICPC_NEUSA", "ICPC_PacNW", "ICPC_RMUSA",
                         "ICPC_SCUSA", "ICPC_SEUSA", "ICPC_SouthCal" };
-    string[] DIRS = { "ContestData", "Docs", "Solutions"};
+    string[] DIRS = { "ContestData", "Docs", "Solutions" };
+    string[] OLD_ANSWER_DIRS = { "output", "input" };
+    string[] CUR_ANSWER_DIRS = { "sample", "secret" };
+    string[] OLD_ANSWER_Files = { "*.in", "*.out" };
 
     const string ROOT_DIR = "..\\";
     ConfigFile mConfig = ConfigFile.GetInstance();
@@ -82,7 +109,7 @@ namespace TestRunner
           mTests.AddIfNew(year, comp, problem, test);
         }
       }
-      catch(System.IO.DirectoryNotFoundException e)
+      catch(System.IO.DirectoryNotFoundException)
       {
         Debug.WriteLine("Badly Formated");
       }
@@ -122,20 +149,35 @@ namespace TestRunner
       }
     }
 
+    //--------------------------------------------------------------------
+    // Purpose:
+    //     Fix the ContestData directory
+    //
+    // Notes:
+    //     None.
+    //--------------------------------------------------------------------
     private void FixContestData(string contestDataDir)
     {
-      string dir = contestDataDir + "\\data";
+      string[] files;
+      string[] dirs;
+      string dir;
+
+      //--------------------------------------------------------------------
+      //  Check to see if there is a data directory
+      //--------------------------------------------------------------------
+      dir = contestDataDir + "\\data";
       if (true == Directory.Exists(dir))
       {
-        Debug.Write(dir + " ");
-        Debug.WriteLine("problem");
+        Debug.WriteLine(dir + " problem");
       }
+
+      //--------------------------------------------------------------------
+      //  Move the directories under data
+      //--------------------------------------------------------------------
       string[] subdirectoryEntries = Directory.GetDirectories(contestDataDir);
       foreach (string comp in subdirectoryEntries)
       {
         string testDir = comp + "\\data";
-
-        //Debug.WriteLine(testDir);
 
         if (true == Directory.Exists(testDir))
         {
@@ -155,8 +197,11 @@ namespace TestRunner
             }
           }
 
-          string[] subdirectoryEntries3 = Directory.GetDirectories(testDir);
-          if (0 == subdirectoryEntries3.Length)
+          //--------------------------------------------------------------------
+          //  Delete the remaining directory
+          //--------------------------------------------------------------------
+          subdirectoryEntries2 = Directory.GetDirectories(testDir);
+          if (0 == subdirectoryEntries2.Length)
           {
             Debug.WriteLine(" delete " + testDir);
             try
@@ -171,6 +216,132 @@ namespace TestRunner
           else
           {
             Debug.WriteLine(" delete " + testDir + " Not Empty");
+          }
+        }
+      }
+
+      //--------------------------------------------------------------------
+      //  Check for old input/output dir
+      //--------------------------------------------------------------------
+      subdirectoryEntries = Directory.GetDirectories(contestDataDir);
+      foreach (string comp in subdirectoryEntries)
+      {
+        foreach (string answerDir in CUR_ANSWER_DIRS)
+        {
+          dir = comp + "\\" + answerDir;
+          if (false == Directory.Exists(dir))
+          {
+            Debug.WriteLine(dir + " creating");
+            Directory.CreateDirectory(dir);
+          }
+        }
+
+        foreach (string answerDir in OLD_ANSWER_DIRS)
+        {
+          dir = comp + "\\" + answerDir;
+          string dirSample = comp + "\\sample";
+          string dirSecret = comp + "\\secret";
+          if (true == Directory.Exists(dir))
+          {
+            Debug.WriteLine(dir + " problem");
+
+            files = Directory.GetFiles(dir);
+            foreach(string theFile in files)
+            {
+              string fileName = theFile.Substring(theFile.LastIndexOf("\\")+1);
+              string fileDirSample = dirSample + "\\" + fileName;
+              string fileDirSecret = dirSecret + "\\" + fileName;
+
+              Debug.WriteLine("[" + theFile + "] ["+ fileDirSample+"] ["+ fileDirSecret+"]");
+
+              File.Copy(theFile, fileDirSample);
+              File.Move(theFile, fileDirSecret);
+            }
+
+            files = Directory.GetFiles(dir);
+            dirs = Directory.GetDirectories(dir);
+
+            if((0==files.Length)&&(0==dirs.Length))
+            {
+              Directory.Delete(dir);
+            }
+            else
+            {
+              Debug.WriteLine("dir:" + dir + " is not empty");
+            }
+          }
+        }
+      }
+
+      //--------------------------------------------------------------------
+      //  Just Files
+      //--------------------------------------------------------------------
+      files = Directory.GetFiles(contestDataDir);
+      dirs = Directory.GetDirectories(contestDataDir);
+
+      if((0 == dirs.Length)&&(0!=files.Length))
+      {
+        Debug.WriteLine(contestDataDir + " needs Fixing");
+        files = Directory.GetFiles(contestDataDir, "*.in");
+
+        foreach(string theFile in files)
+        {
+          string fileBase = theFile.Substring(0, theFile.LastIndexOf("."));
+          string fileName = fileBase.Substring(fileBase.LastIndexOf("\\") + 1);
+          Debug.WriteLine("Creating:"+fileBase);
+          Directory.CreateDirectory(fileBase);
+          string[] fileToMove = Directory.GetFiles(contestDataDir, fileName+".*");
+          foreach(string moveFile in fileToMove)
+          {
+            string newFileName = moveFile.Substring(moveFile.LastIndexOf("\\") + 1);
+            Debug.WriteLine("  Moving:" + moveFile + " to:" + fileBase + "\\"+newFileName);
+            File.Move(moveFile, fileBase + "\\" + newFileName);
+          }
+        }
+      }
+      //--------------------------------------------------------------------
+      //  Old Sol files
+      //--------------------------------------------------------------------
+      dirs = Directory.GetDirectories(contestDataDir);
+      foreach (string dirToCheck in dirs)
+      {
+        foreach (string fileMatch in OLD_ANSWER_Files)
+        {
+          files = Directory.GetFiles(dirToCheck, fileMatch);
+          foreach (string fileMatchMove in files)
+          {
+            string fileName = fileMatchMove.Substring(fileMatchMove.LastIndexOf("\\") + 1);
+            int loc = fileName.LastIndexOf("sample");
+
+            if(-1 != loc)
+            {
+              Debug.WriteLine("Move:" + fileMatchMove + " To" + dirToCheck + "\\sample\\" + fileName + " " + loc);
+              File.Move(fileMatchMove, dirToCheck + "\\sample\\" + fileName);
+            }
+            else
+            {
+              Debug.WriteLine("Move:" + fileMatchMove + " To" + dirToCheck + "\\secret\\" + fileName + " " + loc);
+              File.Move(fileMatchMove, dirToCheck + "\\secret\\" + fileName);
+            }
+          }
+        }
+      }
+      //--------------------------------------------------------------------
+      //  Sample Dir Empty
+      //--------------------------------------------------------------------
+      dirs = Directory.GetDirectories(contestDataDir);
+      foreach (string dirToCheck in dirs)
+      {
+        files = Directory.GetFiles(dirToCheck + "\\sample");
+        if(0 == files.Length)
+        {
+          files = Directory.GetFiles(dirToCheck + "\\secret");
+          foreach(string fileToCopy in files)
+          {
+            string fileNameBase = fileToCopy.Substring(fileToCopy.LastIndexOf("\\"));
+            Debug.WriteLine("Copy:" + fileToCopy + " to:" + dirToCheck + "\\sample" + fileNameBase);
+            Debug.WriteLine("Copy:" + fileToCopy + " to:" + dirToCheck + "\\sample" + fileNameBase);
+            File.Copy(fileToCopy, dirToCheck + "\\sample" + fileNameBase);
           }
         }
       }
@@ -269,6 +440,7 @@ namespace TestRunner
         string dir = ROOT_DIR + "\\" + year;
         FixYear(dir);
       }
+      Debug.WriteLine("Done");
     }
   }
 }
