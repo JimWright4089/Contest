@@ -52,7 +52,9 @@ namespace TestRunner
     //----------------------------------------------------------------------------
     //  Class Attributes
     //----------------------------------------------------------------------------
-    Dictionary<string, Dictionary<string, Dictionary<string, string>>> mTests = new Dictionary<string, Dictionary<string, Dictionary<string, string>>>();
+    Dictionary<string, Dictionary<string, 
+        Dictionary<string, Problem>>> mTests = new Dictionary<string, 
+                      Dictionary<string, Dictionary<string, Problem>>>();
     static Tests mInstance = null;
 
     //--------------------------------------------------------------------
@@ -93,10 +95,10 @@ namespace TestRunner
       else
       {
         Console.WriteLine("{0} does not exist in map", year);
-        mTests.Add(year, new Dictionary<string, Dictionary<string, string>>());
+        mTests.Add(year, new Dictionary<string, Dictionary<string, Problem>>());
       }
 
-      Dictionary<string, Dictionary<string, string>> theYear = mTests[year];
+      Dictionary<string, Dictionary<string, Problem>> theYear = mTests[year];
       keyExists = theYear.ContainsKey(comp);
       if (keyExists)
       {
@@ -105,10 +107,10 @@ namespace TestRunner
       else
       {
         Console.WriteLine("{0} does not exist in map", comp);
-        theYear.Add(comp, new Dictionary<string, string>());
+        theYear.Add(comp, new Dictionary<string, Problem>());
       }
 
-      Dictionary<string, string> theComp = theYear[comp];
+      Dictionary<string, Problem> theComp = theYear[comp];
       keyExists = theYear.ContainsKey(problem);
       if (keyExists)
       {
@@ -117,7 +119,7 @@ namespace TestRunner
       else
       {
         Console.WriteLine("{0} does not exist in map", comp);
-        theComp.Add(problem, dir);
+        theComp.Add(problem, new Problem(dir));
       }
     }
 
