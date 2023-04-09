@@ -1,0 +1,262 @@
+<years>
+  <year name="1998">
+    <comp name="ICPC_PacNW">
+      <prob name="BulkFinal" />
+      <prob name="ChutesFinal" />
+      <prob name="CodesFinal" />
+      <prob name="FilemapFinal" />
+      <prob name="GourmetFinal" />
+      <prob name="StampsFinal" />
+    </comp>
+  </year>
+  <year name="2011">
+    <comp name="ICPC_PacNW">
+      <prob name="Bracelets" />
+      <prob name="Collateral" />
+      <prob name="Flatland" />
+      <prob name="GoodOrBad" />
+      <prob name="LatticeLand" />
+      <prob name="LightningLessons" />
+      <prob name="Locksmith" />
+      <prob name="practice" />
+      <prob name="SpeedRacer" />
+      <prob name="Stupendous" />
+      <prob name="TheStatusIsNotQuo" />
+      <prob name="TreeCount" />
+    </comp>
+  </year>
+  <year name="2013">
+    <comp name="ICPC_PacNW">
+      <prob name="Assignments" />
+      <prob name="Bones" />
+      <prob name="Crusher" />
+      <prob name="DeltaQuadrant" />
+      <prob name="Escape" />
+      <prob name="Federation" />
+      <prob name="Generations" />
+      <prob name="Holodeck" />
+      <prob name="Interstellar" />
+      <prob name="Janeway" />
+      <prob name="Klingons" />
+      <prob name="Languages" />
+      <prob name="M5" />
+    </comp>
+  </year>
+  <year name="2014">
+    <comp name="ICPC_NCUSA">
+      <prob name="AnagramPyramids" />
+      <prob name="AquariumTank" />
+      <prob name="ContinuedFraction" />
+      <prob name="EfficiencyOfBinarySearch" />
+      <prob name="LockedTreasure" />
+      <prob name="PreorderTraversal" />
+      <prob name="RankOrder" />
+      <prob name="RestaurantRatings" />
+      <prob name="Server" />
+    </comp>
+    <comp name="ICPC_PacNW">
+      <prob name="Alchemy" />
+      <prob name="Containment" />
+      <prob name="Diamonds" />
+      <prob name="Function" />
+      <prob name="GoldLeaf" />
+      <prob name="HillNumber" />
+      <prob name="Knights" />
+      <prob name="Majority" />
+      <prob name="NumberGame" />
+      <prob name="Polyhedra" />
+      <prob name="Pushups" />
+      <prob name="RampNumber" />
+      <prob name="RankedChoice" />
+      <prob name="Runes" />
+      <prob name="SalaryInequity" />
+      <prob name="StampStamp" />
+      <prob name="Top25" />
+      <prob name="Towers" />
+      <prob name="Wormhole" />
+      <prob name="Wrench" />
+    </comp>
+  </year>
+  <year name="2015">
+    <comp name="ICPC_PacNW">
+      <prob name="Airports" />
+      <prob name="Blur" />
+      <prob name="ButterflyEffect" />
+      <prob name="Checkers" />
+      <prob name="ClassTime" />
+      <prob name="Classy" />
+      <prob name="Complexity" />
+      <prob name="Coverage" />
+      <prob name="EggDrop" />
+      <prob name="Excellence" />
+      <prob name="FallingBlocks" />
+      <prob name="Gears" />
+      <prob name="Grid" />
+      <prob name="HilbertSort" />
+      <prob name="MagicTrick" />
+      <prob name="Millionaire" />
+      <prob name="Olympics" />
+      <prob name="RacingGems" />
+      <prob name="Surf" />
+      <prob name="Triangle" />
+    </comp>
+  </year>
+  <year name="2016">
+    <comp name="ICPC_PacNW">
+      <prob name="Alphabet" />
+      <prob name="Barbells" />
+      <prob name="BuggyRobot" />
+      <prob name="Cameras" />
+      <prob name="ContestScore" />
+      <prob name="ContestStrats" />
+      <prob name="EnclosureArea" />
+      <prob name="Equality" />
+      <prob name="Gravity" />
+      <prob name="Illumination" />
+      <prob name="Islands" />
+      <prob name="MaximumIslands" />
+      <prob name="MismatchedSocks" />
+      <prob name="Paint" />
+      <prob name="Postman" />
+      <prob name="Shopping" />
+      <prob name="SixSides" />
+      <prob name="ThreeSquare" />
+      <prob name="TournamentWins" />
+      <prob name="WindyPath" />
+      <prob name="ZigZag" />
+    </comp>
+  </year>
+  <year name="2017">
+    <comp name="ICPC_PacNW">
+      <prob name="AvoidingAirports" />
+      <prob name="DelayedWork" />
+      <prob name="DistinctDistances" />
+      <prob name="EnlargingEnthusiasm" />
+      <prob name="FearFactoring" />
+      <prob name="ForbiddenZero" />
+      <prob name="GridColoring" />
+      <prob name="Halfway" />
+      <prob name="LatinSquares" />
+      <prob name="LongLongStrings" />
+      <prob name="OddPalindrome" />
+      <prob name="PurpleRain" />
+      <prob name="RainbowRoads" />
+      <prob name="SecurityBadge" />
+      <prob name="SpinningUpPalindromes" />
+      <prob name="StarArrangements" />
+      <prob name="StraightShot" />
+      <prob name="UnloadedDie" />
+      <prob name="Unsatisfying" />
+    </comp>
+  </year>
+  <year name="2018">
+    <comp name="ICPC_PacNW">
+      <prob name="ContestSetting" />
+      <prob name="CoprimeIntegers" />
+      <prob name="CopsAndRobbers" />
+      <prob name="CountTheBits" />
+      <prob name="Exam" />
+      <prob name="GoatRope" />
+      <prob name="GreedyScheduler" />
+      <prob name="HouseNumbers" />
+      <prob name="Inversions" />
+      <prob name="Knockout" />
+      <prob name="Liars" />
+      <prob name="Mobilization" />
+      <prob name="PaperCuts" />
+      <prob name="PizzaDeal" />
+      <prob name="PokerHand" />
+      <prob name="RandomIndexVectors" />
+      <prob name="Rectangles" />
+      <prob name="RepeatingGoldbachs" />
+      <prob name="TimeLimits" />
+    </comp>
+  </year>
+  <year name="2019">
+    <comp name="ICPC_PacNW">
+      <prob name="blackandwhite" />
+      <prob name="carrylesssquareroot" />
+      <prob name="checkerboard" />
+      <prob name="coloringgraphedgesgame" />
+      <prob name="computercache" />
+      <prob name="dividingbytwo" />
+      <prob name="errorcorrection" />
+      <prob name="evenorodd" />
+      <prob name="fixedpointpermutations" />
+      <prob name="glowpixel" />
+      <prob name="interstellartravel" />
+      <prob name="issuingplates" />
+      <prob name="levenshtein" />
+      <prob name="mazeconnect" />
+      <prob name="morseredux" />
+      <prob name="perfectflush" />
+      <prob name="radioprize" />
+      <prob name="rainbowstrings" />
+      <prob name="speeding" />
+      <prob name="windmillpivot" />
+    </comp>
+  </year>
+  <year name="2020">
+    <comp name="ICPC_PacNW">
+      <prob name="anttyping" />
+      <prob name="badpacking" />
+      <prob name="basicbasis" />
+      <prob name="bitonicordering" />
+      <prob name="condorcet" />
+      <prob name="derangementrotations" />
+      <prob name="dominatingduos" />
+      <prob name="exammanipulation" />
+      <prob name="excitingtournament" />
+      <prob name="kangarooparty" />
+      <prob name="kthsubtree" />
+      <prob name="longestcommonsubsequence" />
+      <prob name="magictrick" />
+      <prob name="missingnumber" />
+      <prob name="nothanks" />
+      <prob name="paintedcorridors" />
+      <prob name="rainbownumbers" />
+      <prob name="ratingproblems" />
+      <prob name="reconstructsum" />
+      <prob name="triangularcollection" />
+      <prob name="triptik" />
+    </comp>
+  </year>
+  <year name="2021">
+    <comp name="ICPC_Worlds">
+      <prob name="cross" />
+      <prob name="dungeoncrawler" />
+      <prob name="fairdivision" />
+      <prob name="guardiansofthegallery" />
+      <prob name="islands" />
+      <prob name="marked" />
+      <prob name="meme" />
+      <prob name="mosaicbrowsing" />
+      <prob name="prehistoricprograms" />
+      <prob name="spiderwalk" />
+      <prob name="splitstream" />
+      <prob name="whereami" />
+    </comp>
+  </year>
+  <year name="2022">
+    <comp name="ICPC_PacNW">
+      <prob name="archeryaccuracy" />
+      <prob name="blackandwhite" />
+      <prob name="circlebounce" />
+      <prob name="diagonals" />
+      <prob name="dormroomdivide" />
+      <prob name="doublepassword" />
+      <prob name="failthemall" />
+      <prob name="hopscotch500" />
+      <prob name="problemsetconstruction" />
+      <prob name="reversiblecyclic" />
+      <prob name="riseandfall" />
+      <prob name="scalingrecipe" />
+      <prob name="shortestmissingsubsequences" />
+      <prob name="squarebounce" />
+      <prob name="tetrisgeneration" />
+      <prob name="tournamentseeding" />
+      <prob name="treehopping" />
+      <prob name="xorisland" />
+    </comp>
+  </year>
+</years>

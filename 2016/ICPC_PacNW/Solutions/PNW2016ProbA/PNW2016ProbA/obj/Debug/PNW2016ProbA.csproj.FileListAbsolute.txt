@@ -12,3 +12,10 @@ M:\Contest\2016\PNW2016ProbA\PNW2016ProbA\bin\Debug\PNW2016ProbA.pdb
 M:\Contest\2016\PNW\PNW2016ProbA\PNW2016ProbA\bin\Debug\PNW2016ProbA.exe.config
 M:\Contest\2016\PNW\PNW2016ProbA\PNW2016ProbA\obj\Debug\PNW2016ProbA.exe
 M:\Contest\2016\PNW\PNW2016ProbA\PNW2016ProbA\obj\Debug\PNW2016ProbA.pdb
+C:\work\JimsCode\Contest\2016\ICPC_PacNW\Solutions\PNW2016ProbA\PNW2016ProbA\bin\Debug\PNW2016ProbA.exe.config
+C:\work\JimsCode\Contest\2016\ICPC_PacNW\Solutions\PNW2016ProbA\PNW2016ProbA\bin\Debug\PNW2016ProbA.exe
+C:\work\JimsCode\Contest\2016\ICPC_PacNW\Solutions\PNW2016ProbA\PNW2016ProbA\bin\Debug\PNW2016ProbA.pdb
+C:\work\JimsCode\Contest\2016\ICPC_PacNW\Solutions\PNW2016ProbA\PNW2016ProbA\obj\Debug\PNW2016ProbA.csproj.AssemblyReference.cache
+C:\work\JimsCode\Contest\2016\ICPC_PacNW\Solutions\PNW2016ProbA\PNW2016ProbA\obj\Debug\PNW2016ProbA.csproj.CoreCompileInputs.cache
+C:\work\JimsCode\Contest\2016\ICPC_PacNW\Solutions\PNW2016ProbA\PNW2016ProbA\obj\Debug\PNW2016ProbA.exe
+C:\work\JimsCode\Contest\2016\ICPC_PacNW\Solutions\PNW2016ProbA\PNW2016ProbA\obj\Debug\PNW2016ProbA.pdb

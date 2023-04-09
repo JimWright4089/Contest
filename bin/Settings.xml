@@ -1,1 +1,5 @@
-<year>2019</year>
+<config>
+  <year>2016</year>
+  <comp>ICPC_PacNW</comp>
+  <prob>ZigZag</prob>
+</config>

@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Log.cs" />
     <Compile Include="Problem.cs" />
     <Compile Include="Tests.cs" />
     <Compile Include="ConfigFile.cs" />

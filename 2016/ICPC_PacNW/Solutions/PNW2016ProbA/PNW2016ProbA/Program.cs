@@ -24,6 +24,10 @@ namespace PNW2016ProbA
 
         static void countLetters(int curLoc, char curChar, int score)
         {
+            if(mMax >= 26)
+            {
+              return;
+            }
             for (int i = curLoc; i < mLine.Length;i++)
             {
                 if(mLine[i] > curChar)
@@ -33,6 +37,10 @@ namespace PNW2016ProbA
                         mMax = score+1;
                     }
                     countLetters(i + 1, mLine[i], score + 1);
+                    if (mMax >= 26)
+                    {
+                      return;
+                    }
                 }
             }
         }
